@@ -1,0 +1,29 @@
+<table>
+  <thead>
+    <tr>
+      <th>Picture</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Company</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people">
+      <td>
+        <img
+          [src]="person.picture"
+          alt="Person picture"
+          width="40"
+          height="40"
+        />
+      </td>
+      <td>{{ person.name }}</td>
+      <td>{{ person.age }}</td>
+      <td>{{ person.company }}</td>
+      <td>{{ person.email }}</td>
+      <td>{{ person.phone }}</td>
+    </tr>
+  </tbody>
+</table>
