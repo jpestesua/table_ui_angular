@@ -56,89 +56,54 @@ describe('PeopleTableComponent', () => {
   });
 
   it('should load people list on initialization', fakeAsync(() => {
-    // Configure spy to return mock data
     personServiceSpy.getPeople.and.returnValue(of(mockPeople));
-
-    // Initialize component
     fixture.detectChanges();
-
-    // Verify service was called
     expect(personServiceSpy.getPeople).toHaveBeenCalled();
-
-    // Wait for async call to resolve
     tick();
-
-    // Verify data was loaded correctly
     expect(component.people).toEqual(mockPeople);
     expect(component.loading).toBeFalse();
     expect(component.error).toBeNull();
   }));
 
   it('should show error when data loading fails', fakeAsync(() => {
-    // Configure spy to simulate error
     personServiceSpy.getPeople.and.returnValue(
       throwError(() => new Error('Network error'))
     );
-
-    // Initialize component
     fixture.detectChanges();
-
-    // Verify service was called
     expect(personServiceSpy.getPeople).toHaveBeenCalled();
-
-    // Wait for async call to resolve
     tick();
-
-    // Verify error was handled correctly
     expect(component.error).toBe('Error loading data');
     expect(component.loading).toBeFalse();
     expect(component.people).toEqual([]);
   }));
 
   it('should display table with correct data', fakeAsync(() => {
-    // Configure spy to return mock data
     personServiceSpy.getPeople.and.returnValue(of(mockPeople));
-
-    // Initialize component
     fixture.detectChanges();
     tick();
     fixture.detectChanges();
 
-    // Verify table renders correctly
     const compiled = fixture.nativeElement;
     const rows = compiled.querySelectorAll('tbody tr');
-
-    // Verify row count
     expect(rows.length).toBe(mockPeople.length);
 
-    // Verify first row content
     const firstRow = rows[0];
     const cells = firstRow.querySelectorAll('td');
 
-    expect(cells[0].textContent).toContain(
-      `${mockPeople[0].firstName} ${mockPeople[0].lastName}`
-    );
-    expect(cells[1].textContent).toContain(mockPeople[0].birthDate);
-    expect(cells[2].textContent).toContain(mockPeople[0].professionalTitle);
-    expect(cells[3].textContent).toContain(mockPeople[0].company);
-    expect(cells[4].textContent).toContain(mockPeople[0].email);
-    expect(cells[5].textContent).toContain(mockPeople[0].phone);
+    expect(cells[0].textContent.trim()).toBe(mockPeople[0].firstName);
+    expect(cells[1].textContent.trim()).toBe(mockPeople[0].lastName);
+    expect(cells[2].textContent.trim()).toBe(mockPeople[0].professionalTitle);
+    expect(cells[3].textContent.trim()).toContain('Jan 1, 2023'); // Fecha formateada
+    expect(cells[4].textContent.trim()).toBe(mockPeople[0].company);
+    expect(cells[5].textContent.trim()).toBe(mockPeople[0].email);
+    expect(cells[6].textContent.trim()).toBe(mockPeople[0].phone);
   }));
 
   it('should show loading state', fakeAsync(() => {
-    // Configure spy to return delayed response
     personServiceSpy.getPeople.and.returnValue(of([]).pipe(delay(1000)));
-
-    // Initialize loading
     component.loadPeople();
-
-    // Verify loading state is active immediately
     expect(component.loading).toBeTrue();
-
-    // Advance time
     tick(1000);
-
-    // Verify loading state is deactivated after loading
     expect(component.loading).toBeFalse();
   }));
 });

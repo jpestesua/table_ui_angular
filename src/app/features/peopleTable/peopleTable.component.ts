@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonService } from '../../core/services/person.service';
+import {
+  PersonService,
+  SortConfig,
+  SortDirection,
+} from '../../core/services/person.service';
 import { Person } from '../../core/models/person.model';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,6 +21,7 @@ export class PeopleTableComponent implements OnInit {
   searchTerm: string = '';
   loading = false;
   error: string | null = null;
+  sortConfig: SortConfig = { column: 'firstName', direction: '' };
 
   constructor(private personService: PersonService) {}
 
@@ -28,7 +33,7 @@ export class PeopleTableComponent implements OnInit {
     this.loading = true;
     this.error = null;
 
-    this.personService.getPeople(this.searchTerm).subscribe({
+    this.personService.getPeople(this.searchTerm, this.sortConfig).subscribe({
       next: (data) => {
         this.people = data;
         this.loading = false;
@@ -42,5 +47,30 @@ export class PeopleTableComponent implements OnInit {
 
   filterPeople(): void {
     this.loadPeople();
+  }
+
+  onSort(column: keyof Person): void {
+    if (this.sortConfig.column === column) {
+      // Cambiar la dirección del ordenamiento
+      this.sortConfig = {
+        ...this.sortConfig,
+        direction: this.getNextSortDirection(this.sortConfig.direction),
+      };
+    } else {
+      // Nueva columna, ordenar ascendente por defecto
+      this.sortConfig = { column, direction: 'asc' };
+    }
+    this.loadPeople();
+  }
+
+  private getNextSortDirection(currentDirection: SortDirection): SortDirection {
+    switch (currentDirection) {
+      case 'asc':
+        return 'desc';
+      case 'desc':
+        return '';
+      default:
+        return 'asc';
+    }
   }
 }

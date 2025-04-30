@@ -1,40 +1,97 @@
-<div class="search-container">
-  <input
-    type="text"
-    [(ngModel)]="searchTerm"
-    (ngModelChange)="filterPeople()"
-    placeholder="Search by keyword..."
-    class="search-input"
-  />
+<div class="table-container">
+  <div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="filterPeople()"
+      placeholder="Search..."
+      class="search-input"
+    />
+  </div>
+
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <table class="data-table" *ngIf="!loading && !error">
+    <thead>
+      <tr>
+        <th
+          class="sortable"
+          (click)="onSort('firstName')"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'firstName' ? sortConfig.direction : ''
+          "
+        >
+          Name
+        </th>
+        <th
+          class="sortable"
+          (click)="onSort('lastName')"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'lastName' ? sortConfig.direction : ''
+          "
+        >
+          Last Name
+        </th>
+        <th
+          class="sortable"
+          (click)="onSort('professionalTitle')"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'professionalTitle'
+              ? sortConfig.direction
+              : ''
+          "
+        >
+          Title
+        </th>
+        <th
+          class="sortable"
+          (click)="onSort('birthDate')"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'birthDate' ? sortConfig.direction : ''
+          "
+        >
+          Birth Date
+        </th>
+        <th
+          class="sortable"
+          (click)="onSort('company')"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'company' ? sortConfig.direction : ''
+          "
+        >
+          Company
+        </th>
+        <th
+          class="sortable"
+          (click)="onSort('email')"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'email' ? sortConfig.direction : ''
+          "
+        >
+          Email
+        </th>
+        <th
+          class="sortable"
+          (click)="onSort('phone')"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'phone' ? sortConfig.direction : ''
+          "
+        >
+          Phone
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people">
+        <td>{{ person.firstName }}</td>
+        <td>{{ person.lastName }}</td>
+        <td>{{ person.professionalTitle }}</td>
+        <td>{{ person.birthDate | date }}</td>
+        <td>{{ person.company }}</td>
+        <td>{{ person.email }}</td>
+        <td>{{ person.phone }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-<div *ngIf="loading" class="loading">Loading...</div>
-
-<div *ngIf="error" class="error">
-  {{ error }}
-</div>
-
-<table *ngIf="!loading && !error">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Last Name</th>
-      <th>Birth Date</th>
-      <th>Professional Title</th>
-      <th>Company</th>
-      <th>Email</th>
-      <th>Phone</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let person of people">
-      <td>{{ person.firstName }}</td>
-      <td>{{ person.lastName }}</td>
-      <td>{{ person.birthDate | date : "mediumDate" }}</td>
-      <td>{{ person.professionalTitle }}</td>
-      <td>{{ person.company }}</td>
-      <td>{{ person.email }}</td>
-      <td>{{ person.phone }}</td>
-    </tr>
-  </tbody>
-</table>
