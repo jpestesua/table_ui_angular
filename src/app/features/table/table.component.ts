@@ -27,14 +27,14 @@ export class TableComponent implements OnInit {
   }
 
   loadPeople(): void {
-    this.personService.getPeople(this.searchTerm, this.sortConfig).subscribe(
-      (data) => {
+    this.personService.getPeople(this.searchTerm, this.sortConfig).subscribe({
+      next: (data) => {
         this.people = data;
       },
-      (error) => {
+      error: (error) => {
         console.error('Error loading people:', error);
-      }
-    );
+      },
+    });
   }
 
   onSearch(): void {
@@ -44,9 +44,10 @@ export class TableComponent implements OnInit {
   onSort(column: keyof Person): void {
     if (this.sortConfig.column === column) {
       // Cambiar la dirección del ordenamiento
-      this.sortConfig.direction = this.getNextSortDirection(
-        this.sortConfig.direction
-      );
+      this.sortConfig = {
+        ...this.sortConfig,
+        direction: this.getNextSortDirection(this.sortConfig.direction),
+      };
     } else {
       // Nueva columna, ordenar ascendente por defecto
       this.sortConfig = { column, direction: 'asc' };
