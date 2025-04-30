@@ -1,256 +1,92 @@
 [
   {
-    "_id": "681143d14dca0099662d567f",
-    "index": 0,
-    "guid": "024cb0bb-8571-448b-ac09-36f854169271",
-    "isActive": true,
-    "balance": "$3,007.54",
-    "picture": "http://placehold.it/32x32",
-    "age": 26,
-    "eyeColor": "green",
-    "name": "Felecia Sandoval",
-    "gender": "female",
+    "firstName": "Felecia",
+    "lastName": "Sandoval",
+    "professionalTitle": "Senior Software Engineer",
+    "birthDate": "1998-03-15",
     "company": "ENDICIL",
     "email": "feleciasandoval@endicil.com",
-    "phone": "+1 (872) 518-2557",
-    "address": "499 Lester Court, Springhill, Massachusetts, 5599",
-    "about": "Culpa voluptate occaecat deserunt incididunt minim officia commodo laboris. Nostrud mollit tempor proident occaecat ad incididunt adipisicing. Irure eiusmod non sunt duis in aliquip culpa culpa nulla.\r\n",
-    "registered": "2014-07-14T02:39:51 +05:00",
-    "latitude": -40.567413,
-    "longitude": 143.776848,
-    "tags": [
-      "consequat",
-      "consectetur",
-      "aute",
-      "sit",
-      "ut",
-      "do",
-      "reprehenderit"
-    ],
-    "friends": [
-      {
-        "id": 0,
-        "name": "Owen Chang"
-      },
-      {
-        "id": 1,
-        "name": "Noel Rivers"
-      },
-      {
-        "id": 2,
-        "name": "Leanna Bass"
-      }
-    ],
-    "greeting": "Hello, Felecia Sandoval! You have 6 unread messages.",
-    "favoriteFruit": "banana"
+    "phone": "+1 (872) 518-2557"
   },
   {
-    "_id": "681143d1d108d4dcc1a27f7a",
-    "index": 1,
-    "guid": "6193a84e-3ad8-4051-8ad1-a6c29e9b405d",
-    "isActive": false,
-    "balance": "$1,266.61",
-    "picture": "http://placehold.it/32x32",
-    "age": 24,
-    "eyeColor": "blue",
-    "name": "Bird Atkinson",
-    "gender": "male",
+    "firstName": "Bird",
+    "lastName": "Atkinson",
+    "professionalTitle": "UX/UI Designer",
+    "birthDate": "2000-06-22",
     "company": "VELOS",
     "email": "birdatkinson@velos.com",
-    "phone": "+1 (801) 561-2112",
-    "address": "626 Anna Court, Groton, Georgia, 1476",
-    "about": "Irure non sunt elit dolore elit. Ex ut duis laboris sint commodo sunt et excepteur pariatur magna sit. Proident elit reprehenderit mollit ut exercitation irure cupidatat do. Nulla est elit ipsum exercitation duis do. Duis ullamco nostrud ullamco esse consectetur qui. Duis mollit sit sunt sit nulla anim aliqua deserunt magna sunt deserunt. Dolore ad ipsum proident cillum voluptate sit.\r\n",
-    "registered": "2016-08-25T07:01:50 +05:00",
-    "latitude": -19.354587,
-    "longitude": 115.373617,
-    "tags": [
-      "et",
-      "non",
-      "consectetur",
-      "officia",
-      "sint",
-      "adipisicing",
-      "labore"
-    ],
-    "friends": [
-      {
-        "id": 0,
-        "name": "Hansen Hogan"
-      },
-      {
-        "id": 1,
-        "name": "Preston Curry"
-      },
-      {
-        "id": 2,
-        "name": "Bessie Flowers"
-      }
-    ],
-    "greeting": "Hello, Bird Atkinson! You have 8 unread messages.",
-    "favoriteFruit": "banana"
+    "phone": "+1 (801) 561-2112"
   },
   {
-    "_id": "681143d15067f2ea079c1bc9",
-    "index": 2,
-    "guid": "83c949e3-42bf-46a0-a7f2-8afaa873a673",
-    "isActive": false,
-    "balance": "$2,382.86",
-    "picture": "http://placehold.it/32x32",
-    "age": 25,
-    "eyeColor": "brown",
-    "name": "Cara Higgins",
-    "gender": "female",
+    "firstName": "Cara",
+    "lastName": "Higgins",
+    "professionalTitle": "Data Scientist",
+    "birthDate": "1999-11-08",
     "company": "BITENDREX",
     "email": "carahiggins@bitendrex.com",
-    "phone": "+1 (845) 437-2726",
-    "address": "510 Cove Lane, Efland, Virginia, 2269",
-    "about": "Officia excepteur tempor nostrud elit labore culpa labore amet consequat commodo magna magna laborum eiusmod. Cupidatat culpa nostrud nostrud ad commodo sit velit sunt adipisicing commodo fugiat nisi. Laboris esse ea laboris occaecat anim labore est fugiat cupidatat dolor duis laboris amet deserunt. Veniam magna labore quis occaecat adipisicing aliqua fugiat. Laboris qui mollit exercitation cupidatat sit eu reprehenderit. Aliqua culpa laboris non amet id amet officia sit.\r\n",
-    "registered": "2016-01-07T09:41:34 +05:00",
-    "latitude": -18.164379,
-    "longitude": 50.304829,
-    "tags": ["sint", "non", "et", "quis", "laboris", "non", "quis"],
-    "friends": [
-      {
-        "id": 0,
-        "name": "Cannon Nunez"
-      },
-      {
-        "id": 1,
-        "name": "Fuller Carr"
-      },
-      {
-        "id": 2,
-        "name": "Ruth Cantu"
-      }
-    ],
-    "greeting": "Hello, Cara Higgins! You have 4 unread messages.",
-    "favoriteFruit": "apple"
+    "phone": "+1 (845) 437-2726"
   },
   {
-    "_id": "681143d1778178e1ba7fdc97",
-    "index": 3,
-    "guid": "1128f8ef-8f17-4a51-8917-bee593ecd1cc",
-    "isActive": true,
-    "balance": "$1,419.55",
-    "picture": "http://placehold.it/32x32",
-    "age": 23,
-    "eyeColor": "brown",
-    "name": "Farley Cleveland",
-    "gender": "male",
+    "firstName": "Farley",
+    "lastName": "Cleveland",
+    "professionalTitle": "Product Manager",
+    "birthDate": "2001-04-30",
     "company": "DIGIGENE",
     "email": "farleycleveland@digigene.com",
-    "phone": "+1 (809) 553-3750",
-    "address": "242 Dumont Avenue, Wright, Hawaii, 8021",
-    "about": "In velit in officia enim exercitation sunt qui et sunt. Quis mollit occaecat aute aliquip eiusmod et voluptate sunt. Non nulla officia nostrud officia nostrud tempor.\r\n",
-    "registered": "2017-10-15T03:05:32 +05:00",
-    "latitude": -19.619473,
-    "longitude": 72.340023,
-    "tags": [
-      "cupidatat",
-      "nulla",
-      "cupidatat",
-      "nisi",
-      "veniam",
-      "cupidatat",
-      "amet"
-    ],
-    "friends": [
-      {
-        "id": 0,
-        "name": "Karin George"
-      },
-      {
-        "id": 1,
-        "name": "Mollie Bishop"
-      },
-      {
-        "id": 2,
-        "name": "Harper Rowland"
-      }
-    ],
-    "greeting": "Hello, Farley Cleveland! You have 2 unread messages.",
-    "favoriteFruit": "strawberry"
+    "phone": "+1 (809) 553-3750"
   },
   {
-    "_id": "681143d1676974c263f94b5e",
-    "index": 4,
-    "guid": "181e9f80-3ea6-41d9-985c-77e757ac2714",
-    "isActive": false,
-    "balance": "$2,451.59",
-    "picture": "http://placehold.it/32x32",
-    "age": 22,
-    "eyeColor": "blue",
-    "name": "Craig Rivera",
-    "gender": "male",
+    "firstName": "Craig",
+    "lastName": "Rivera",
+    "professionalTitle": "Frontend Developer",
+    "birthDate": "2002-02-14",
     "company": "UNIA",
     "email": "craigrivera@unia.com",
-    "phone": "+1 (858) 562-3653",
-    "address": "838 Vanderveer Street, Galesville, Illinois, 3118",
-    "about": "Excepteur cupidatat ad dolore esse ut mollit excepteur esse nostrud magna aliquip fugiat Lorem. Culpa qui sint incididunt proident velit aliqua dolor minim laboris consectetur. Reprehenderit dolor ea occaecat voluptate. Adipisicing culpa ad Lorem adipisicing ea officia ullamco mollit. Ad aute minim aute culpa irure.\r\n",
-    "registered": "2023-08-21T12:43:33 +05:00",
-    "latitude": -83.650721,
-    "longitude": -131.676239,
-    "tags": [
-      "ad",
-      "commodo",
-      "ea",
-      "pariatur",
-      "mollit",
-      "exercitation",
-      "amet"
-    ],
-    "friends": [
-      {
-        "id": 0,
-        "name": "Baker Ferguson"
-      },
-      {
-        "id": 1,
-        "name": "Sandy Mathews"
-      },
-      {
-        "id": 2,
-        "name": "Helga Olson"
-      }
-    ],
-    "greeting": "Hello, Craig Rivera! You have 8 unread messages.",
-    "favoriteFruit": "strawberry"
+    "phone": "+1 (858) 562-3653"
   },
   {
-    "_id": "681143d10320820a438ddb43",
-    "index": 5,
-    "guid": "7e4879fc-60e8-4a0e-b070-a97a3faa1c38",
-    "isActive": false,
-    "balance": "$2,970.20",
-    "picture": "http://placehold.it/32x32",
-    "age": 26,
-    "eyeColor": "brown",
-    "name": "Helena Reeves",
-    "gender": "female",
+    "firstName": "Helena",
+    "lastName": "Reeves",
+    "professionalTitle": "DevOps Engineer",
+    "birthDate": "1998-09-05",
     "company": "AVENETRO",
     "email": "helenareeves@avenetro.com",
-    "phone": "+1 (965) 563-2169",
-    "address": "183 Clinton Avenue, Fruitdale, Iowa, 7788",
-    "about": "Elit laborum ex excepteur amet velit laborum quis aute irure. Incididunt adipisicing laboris eiusmod ipsum culpa cupidatat in esse nostrud aliquip eiusmod nulla eiusmod reprehenderit. Occaecat aute consectetur irure consectetur et.\r\n",
-    "registered": "2023-08-31T10:54:51 +05:00",
-    "latitude": 5.034568,
-    "longitude": -65.263422,
-    "tags": ["non", "nisi", "labore", "non", "tempor", "ipsum", "qui"],
-    "friends": [
-      {
-        "id": 0,
-        "name": "Kasey Allison"
-      },
-      {
-        "id": 1,
-        "name": "Fox Everett"
-      },
-      {
-        "id": 2,
-        "name": "Kate Salinas"
-      }
-    ],
-    "greeting": "Hello, Helena Reeves! You have 2 unread messages.",
-    "favoriteFruit": "apple"
+    "phone": "+1 (965) 563-2169"
+  },
+  {
+    "firstName": "Marcus",
+    "lastName": "Chen",
+    "professionalTitle": "Full Stack Developer",
+    "birthDate": "1997-08-12",
+    "company": "TECHNOVATE",
+    "email": "marcuschen@technovate.com",
+    "phone": "+1 (415) 789-1234"
+  },
+  {
+    "firstName": "Sophia",
+    "lastName": "Rodriguez",
+    "professionalTitle": "Cloud Architect",
+    "birthDate": "1996-05-20",
+    "company": "CLOUDSCALE",
+    "email": "sophiarodriguez@cloudscale.com",
+    "phone": "+1 (212) 456-7890"
+  },
+  {
+    "firstName": "Ethan",
+    "lastName": "Patel",
+    "professionalTitle": "Mobile Developer",
+    "birthDate": "2000-11-30",
+    "company": "APPSTORM",
+    "email": "ethanpatel@appstorm.com",
+    "phone": "+1 (310) 123-4567"
+  },
+  {
+    "firstName": "Isabella",
+    "lastName": "Kim",
+    "professionalTitle": "AI Engineer",
+    "birthDate": "1999-02-18",
+    "company": "NEURALINK",
+    "email": "isabellakim@neuralink.com",
+    "phone": "+1 (650) 987-6543"
   }
 ]

@@ -1,0 +1,94 @@
+<div class="table-container">
+  <div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="onSearch()"
+      placeholder="Buscar..."
+      class="search-input"
+    />
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th
+          (click)="onSort('firstName')"
+          class="sortable"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'firstName' ? sortConfig.direction : ''
+          "
+        >
+          Nombre
+        </th>
+        <th
+          (click)="onSort('lastName')"
+          class="sortable"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'lastName' ? sortConfig.direction : ''
+          "
+        >
+          Apellido
+        </th>
+        <th
+          (click)="onSort('professionalTitle')"
+          class="sortable"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'professionalTitle'
+              ? sortConfig.direction
+              : ''
+          "
+        >
+          Título
+        </th>
+        <th
+          (click)="onSort('birthDate')"
+          class="sortable"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'birthDate' ? sortConfig.direction : ''
+          "
+        >
+          Fecha de Nacimiento
+        </th>
+        <th
+          (click)="onSort('company')"
+          class="sortable"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'company' ? sortConfig.direction : ''
+          "
+        >
+          Empresa
+        </th>
+        <th
+          (click)="onSort('email')"
+          class="sortable"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'email' ? sortConfig.direction : ''
+          "
+        >
+          Email
+        </th>
+        <th
+          (click)="onSort('phone')"
+          class="sortable"
+          [attr.data-sort-direction]="
+            sortConfig.column === 'phone' ? sortConfig.direction : ''
+          "
+        >
+          Teléfono
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people">
+        <td>{{ person.firstName }}</td>
+        <td>{{ person.lastName }}</td>
+        <td>{{ person.professionalTitle }}</td>
+        <td>{{ person.birthDate | date }}</td>
+        <td>{{ person.company }}</td>
+        <td>{{ person.email }}</td>
+        <td>{{ person.phone }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
